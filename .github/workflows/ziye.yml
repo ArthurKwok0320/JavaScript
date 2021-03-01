@@ -8,7 +8,7 @@ on:
   watch:
     types: started
   push:
-    branches: [ master ]
+    branches: [ main ]
   repository_dispatch:
     types: sync-ziye-scripts
 jobs:
@@ -28,6 +28,6 @@ jobs:
         if: env.PAT
         with:
           source_repo: "https://github.com/ziye11/JavaScript.git"
-          source_branch: "master"
+          source_branch: "main"
           destination_branch: "ziye"
           github_token: ${{ secrets.PAT }}
